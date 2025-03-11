@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CogniAI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h2 id="AI"><span class="logo-icon">C</span> CogniAI</h2>
+    </header>
+    
+    <div class="chat-container">
+        <p id="outputText"></p>
+    </div>
+    
+    <div class="input-container">
+        <textarea id="userInput" placeholder="Message CogniAI..."></textarea>
+        <button id="btn">→</button>
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <script>
+        const textarea = document.getElementById('userInput');
+        textarea.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight < 150) ? this.scrollHeight + 'px' : '150px';
+        });
+    </script>
+</body>
+</html>
